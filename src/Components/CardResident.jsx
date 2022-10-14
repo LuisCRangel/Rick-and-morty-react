@@ -10,7 +10,7 @@ const CardResident = ({ url }) => {
     <article className="card">
       <header>
         <img src={resident?.image} alt={`image of ${resident?.name}`} />
-        <div className="status-card">{resident?.status}</div>
+        <div className={`status-card status-${resident?.status}`}>{resident?.status}</div>
       </header>
       <div>
         <h3>{resident?.name}</h3>

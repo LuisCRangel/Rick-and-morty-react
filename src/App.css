@@ -22,9 +22,9 @@ li{
   list-style: none;
 }
 img{
-  width: 100%;
-  border-bottom-left-radius: 0.7rem;
-  border-bottom-right-radius: 0.7rem;
+  width: 100%;   
+  border-radius: 0.7rem;
+ 
 }
 .img-header{
   background-image: url('./assets/rick-and-morty.png');
@@ -33,13 +33,13 @@ img{
 .card{
   display: inline-block;
   background-color: #062226;
-  width: 30%;
+  width: 20%;  
  position: relative;
  outline: 3px rgb(44, 255, 58) solid;
  background-color: #062226; 
  margin: 1%;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-radius: 1rem;
+  /* border-bottom-right-radius: 1rem; */
   
 }
 .card-resident{
@@ -63,7 +63,7 @@ img{
   color: white;
   border-color: black 2px solid;
   background-color: #062226;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 30px;
 }
 .location-name{
@@ -81,16 +81,21 @@ img{
   color: rgb(255, 255, 255);
 }
 .form{
-  margin: 0.2rem;
-  display: flex;
-  height: 2rem;
+  display: flex;  
+  height: 5rem;
+  flex-direction: column;
   margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
+  margin-right: auto; 
+  margin: 0; 
+  align-items: center;
+  gap: 15px;
 }
 .input {
-  flex-basis: 80%;
-  text-align: center;  
+  flex-basis: 70%;
+  width: 550px;
+  text-align: center;
+  justify-content: center;  
+  align-content: center;
   line-height: 28px;
   border: 2px solid transparent;
   border-bottom-color: rgb(0, 255, 38);
@@ -98,17 +103,16 @@ img{
   outline: none;
   background-color: transparent;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #05ff1e;
+  color: #ffffff;
   transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  margin-left: auto;
-  margin-right: auto;
+  
  }
  
  .input:focus, input:hover {
   outline: none;
   padding: .2rem 1rem;
   border-radius: 1rem;
-  border-color: #7a9cc6;
+  border-color: #05ff1e;
  }
  
  .input::placeholder {
@@ -125,23 +129,26 @@ img{
   cursor: pointer;
   border-radius: 5px;
   margin-right: auto;
+  margin-left: auto;
+  height: 70px;
+  border: none;
   
 }
 
 /* <------Footer-------> */
 
 .footer {
-  margin-top: 5rem;
+  margin-top: 8rem;
   background-color: #062226;
   color: #fff;
 }
 
 .contenedor__footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  max-width: 750px;
+  display: flex;
+  flex-direction: column; 
+  max-width: 500px;
   margin: 0 auto;
-  padding: 1rem 0 3rem;
+  padding-top: 20px;
 }
 
 .contenedro__footer-item {
@@ -173,12 +180,23 @@ img{
   gap: 1rem;
 }
 
+.footer__contact{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 25px;  
+  margin-bottom: 10px;
+}
+
 .contenedor__footer-copy {
+  position: relative;  
   padding: 20px 0;
   border-top: 1px solid rgb(44, 255, 58);;
   text-align: center;
+  margin-top: 40px;
   font-size: 12px;
   color: rgb(255, 255, 255);
+}
+.bx{
+  font-size: 30px;
 }
 @media (max-width:748px){
   body{
@@ -207,6 +225,7 @@ img{
   }
   .input {
     flex-basis: 50%;
+    width: 250px;
     text-align: center;  
     line-height: 28px;
     border: 2px solid transparent;
@@ -215,7 +234,7 @@ img{
     outline: none;
     background-color: transparent;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #05ff1e;
+    color: #ffffff;
     transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-left: auto;
     margin-right: auto;
@@ -225,7 +244,7 @@ img{
     outline: none;
     padding: .2rem 1rem;
     border-radius: 1rem;
-    border-color: #7a9cc6;
+    border-color: #05ff1e;
    }
    
    .input::placeholder {
@@ -262,5 +281,24 @@ img{
   }
   .contenedor__footer {
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
   }
+  .contenedro__footer-item{
+  justify-content: center;
+  }
+  .footer__contact{
+    font-size: 20px;
+  }
+  .bx{
+    font-size: 22px;
+  }
+}
+.status-Dead{
+  color: red;
+}
+.status-Alive{
+  color: #04a0e3;
+}
+.status-unknown{
+  color: gray;
 }
