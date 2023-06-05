@@ -28,7 +28,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setSearchInput(e.target.search.value);
+    setSearchInput(e.target.search.value);devicePixelRatio
   };
 
   console.log(searchInput);
